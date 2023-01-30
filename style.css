@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600,700');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/*** COLORS ***/
+.bg-soft-red {
+    background-color: #E65F78;
+}
+
+.bg-bakelit-red {
+    background-color: #F80000;
+}
+
+.bakelit-red {
+    color: #F80000;
+}
+
+.text-white {
+    color: antiquewhite;
+}
+
+.border-white {
+    border: 1px solid antiquewhite;
+}
+
+/** GENERAL **/
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+
+/*** NAV ***/
+.vertical-hr {
+    border-left: 2px solid antiquewhite;
+    display: inline-block;
+    height: 35px;
+    margin-right: 5px;
+}
+
+a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(250,235,215)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: antiquewhite;
+}
