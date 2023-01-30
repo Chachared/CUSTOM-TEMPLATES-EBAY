@@ -143,18 +143,19 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col-4 col-sm-6 col-xs-12">
-                    <div class="card rounded" style="max-width:50%;">
+                    <div class="card shadow-lg" style="max-width:50%;">
                         <div class="card-body">
                             <h5 class="card-title">BAKELIT</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Pièces pour véhicules classiques</h6>
                             <p class="card-text">Les avantages de Bakelit</p>
                             <hr>
                             <div class="container d-flex justify-content-center">
-                                <div class="col flex-wrap">
-                                    <img src="" alt="logo1" class="img-responsive">
-                                    <img src="" alt="logo2" class="img-responsive">
-                                    <img src="" alt="logo3" class="img-responsive">
-                                    <img src="" alt="logo4" class="img-responsive">
+                                <div class="flex-wrap">
+                                    <h6>Nous leur faisons confiance</h6>
+                                    <img src="" alt="logo1" class="img-responsive me-2">
+                                    <img src="" alt="logo2" class="img-responsive me-2">
+                                    <img src="" alt="logo3" class="img-responsive me-2">
+                                    <img src="" alt="logo4" class="img-responsive me-2">
                                 </div>
 
 
@@ -163,21 +164,23 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-6 col-xs-12">
+                <div class="col-lg-6 col-sm-6 col-xs-12">
                     <div class="row">
                         <div class="col-5">
-                            <img src="" alt="photo du produit" tyle="width: 18rem;">
+                            <img src="${PRODUCT.CustomFields.Image1}" id="product_picture_1" alt="photo du produit">
                             <div class="mt-2">
-                                <img src="" alt="thumb" class="img-thumbnail">
-                                <img src="" alt="thumb" class="img-thumbnail">
-                                <img src="" alt="thumb" class="img-thumbnail">
+                                <img src="${PRODUCT.CustomFields.Image2}" alt="thumb" class="img-thumbnail">
+                                <img src="${PRODUCT.CustomFields.Image3}" alt="thumb" class="img-thumbnail">
+                                <img src="${PRODUCT.CustomFields.Image4}" alt="thumb" class="img-thumbnail">
+                                <img src="${PRODUCT.CustomFields.Image5}" alt="thumb" class="img-thumbnail">
                             </div>
                         </div>
 
                         <div class="col-7">
-                            <h4>Nom du produit</h4>
-                            <p>Avis des clients</p>
-                            <p>Délai de livraison moyen</p>
+                            <h4 id="product_title">${PRODUCT.Title}</h4>
+                            <h5 id="brand">${PRODUCT.CustomFields.Brand}</h5>
+                            <p class="mt-5">Avis des clients</p>
+                            <p>Livraison: ${PRODUCT.CustomFields.Shipping}</p>
                         </div>
 
                     </div>
@@ -188,17 +191,9 @@
             <div class="bg-bakelit-red text-white text-center">
                 <h4>CARACTERISTIQUES TECHNIQUES</h4>
             </div>
-            <div>
-                <ul class="text-center">
-                    <li>Ceci est une caractéristique du produit</li>
-                    <li>Ceci est une caractéristique du produit</li>
-                    <li>Ceci est une caractéristique du produit</li>
-                    <li>Ceci est une caractéristique du produit</li>
-                    <li>Ceci est une caractéristique du produit</li>
-                    <li>Ceci est une caractéristique du produit</li>
-                </ul>
-            </div>
-
+            <div vocab="https://schema.org/" typeof="Product"><span id="product_description"
+                    property="description">${PRODUCT.Description}</span></div>
+            <table id="product_characteristics" class="table">${PRODUCT.CustomFields.Features}</table>
         </div>
         <!-- END Row réassurance + produit -->
 

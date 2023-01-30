@@ -62,3 +62,8 @@ a {
 .custom-toggler.navbar-toggler {
     border-color: antiquewhite;
 }
+
+/** card reassurance**/
+.card {
+    border-radius: 20px 20px 20px 20px;
+}
