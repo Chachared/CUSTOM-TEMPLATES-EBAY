@@ -67,3 +67,121 @@ a {
 .card {
     border-radius: 20px 20px 20px 20px;
 }
+
+/** gallery **/
+
+.gallery__wrapper {
+    display: block;
+    height: 80%;
+}
+
+.content__gallery {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center
+}
+
+.content__gallery .slider__wrapper {
+    overflow: hidden;
+}
+
+.slider__wrapper {
+    border: solid 1px #E65F78;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 5px 5px 5px #E65F78;
+}
+
+.content__gallery .slider__wrapper .slider {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0;
+    transition: all 0s 9999999s
+}
+
+.content__gallery .slider__wrapper .slider>* {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+.content__gallery .thumb__float {
+    display: inline-block;
+    margin: 12px;
+    border: 1px solid #E65F78;
+}
+
+.content__gallery .thumb__float .thumb__wrapper {
+    width: 80px;
+    height: auto;
+    padding: 3px;
+}
+
+.content__gallery .thumb__float .thumb__wrapper img {
+    cursor: zoom-in
+}
+
+.content__gallery .slider__wrapper {
+    order: 1
+}
+
+.content__gallery .thumb__float {
+    order: 2
+}
+
+#layout {
+    overflow-x: hidden;
+}
+
+#layout .slider__wrapper {
+    width: 100%;
+    height: 250px;
+    order: 1
+}
+
+.thumb1:active~.slider__wrapper>.slider {
+    -webkit-transition: all 0s;
+    -ms-transition: all 0s;
+    transition: all 0s;
+    transform: translateX(-0%);
+    -webkit-transform: translateX(-0%);
+    -ms-transform: translateX(-0%);
+}
+
+.thumb2:active~.slider__wrapper>.slider {
+    -webkit-transition: all 0s;
+    -ms-transition: all 0s;
+    transition: all 0s;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+}
+
+.thumb3:active~.slider__wrapper>.slider {
+    -webkit-transition: all 0s;
+    -ms-transition: all 0s;
+    transition: all 0s;
+    transform: translateX(-200%);
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+}
+
+.slide-1 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Chevrolet_Corvette_1958.jpg/640px-Chevrolet_Corvette_1958.jpg");
+}
+
+.slide-2 {
+    background-image: url("https://cdn.dealeraccelerate.com/international/1/811/38358/1920x1440/1996-mitsubishi-lancer-evolution-iv");
+}
+
+.slide-3 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-AxLl6W6X-kSYq4XxFQh5CBCRgXtP-ny-UbYcSVIqfN-EqO-Oc3uIcJWEca-AZilrtio&usqp=CAU");
+}

@@ -15,7 +15,8 @@
         <div class="container">
             <div class="row ">
                 <div class="col-lg-2 col-xs-6 d-flex align-items-end me-1 mt-2">
-                    <img src="https://pro-classic.fr/images/logo-dark.webp" class="img-responsive" alt="Logo Bakelit" />
+                    <img src="https://media.carooline.com/media/BAKELIT/EBAY/images/logo.png" class="img-responsive"
+                        alt="Logo Bakelit" />
                 </div>
                 <div class="col-lg-9 col-xs-6 d-flex align-items-end justify-content-start ms-1 mt-2">
                     <h6> <i>La place de marché de pièces détachées 100% véhicules "Classiques"</i> </h6>
@@ -142,8 +143,8 @@
         <!-- START Row réassurance + produit -->
         <div class="container">
             <div class="row my-5">
-                <div class="col-4 col-sm-6 col-xs-12">
-                    <div class="card shadow-lg" style="max-width:50%;">
+                <div class="col-lg-3 col-sm-12 col-xs-12 mx-2">
+                    <div class="card shadow-lg" style="max-width:90%;">
                         <div class="card-body">
                             <h5 class="card-title">BAKELIT</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Pièces pour véhicules classiques</h6>
@@ -164,19 +165,42 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="col-lg-8 col-xs-12">
+
                     <div class="row">
-                        <div class="col-5">
-                            <img src="${PRODUCT.CustomFields.Image1}" id="product_picture_1" alt="photo du produit">
-                            <div class="mt-2">
-                                <img src="${PRODUCT.CustomFields.Image2}" alt="thumb" class="img-thumbnail">
-                                <img src="${PRODUCT.CustomFields.Image3}" alt="thumb" class="img-thumbnail">
-                                <img src="${PRODUCT.CustomFields.Image4}" alt="thumb" class="img-thumbnail">
-                                <img src="${PRODUCT.CustomFields.Image5}" alt="thumb" class="img-thumbnail">
+                        <div class="col-lg-5 col-sm-12 col-xs-12" id="layout">
+                            <div class="content__gallery">
+                                <div class="thumb__float thumb1">
+                                    <div class="thumb__wrapper">
+                                        <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Chevrolet_Corvette_1958.jpg/640px-Chevrolet_Corvette_1958.jpg">
+                                    </div>
+                                </div>
+                                <div class="thumb__float thumb2">
+                                    <div class="thumb__wrapper">
+                                        <img src="https://cdn.dealeraccelerate.com/international/1/811/38358/1920x1440/1996-mitsubishi-lancer-evolution-iv">
+                                    </div>
+                                </div>
+                                <div class="thumb__float thumb3">
+                                    <div class="thumb__wrapper">
+                                        <img
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-AxLl6W6X-kSYq4XxFQh5CBCRgXtP-ny-UbYcSVIqfN-EqO-Oc3uIcJWEca-AZilrtio&usqp=CAU">
+                                    </div>
+                                </div>
+                                <div class="slider__wrapper">
+                                    <div class="slider">
+                                        <div class="slide-1">
+                                        </div>
+                                        <div class="slide-2">
+                                        </div>
+                                        <div class="slide-3">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-7">
+                        <div class="col-lg-7 col-sm-12 col-xs-12">
                             <h4 id="product_title">${PRODUCT.Title}</h4>
                             <h5 id="brand">${PRODUCT.CustomFields.Brand}</h5>
                             <p class="mt-5">Avis des clients</p>
@@ -193,21 +217,21 @@
             </div>
             <div vocab="https://schema.org/" typeof="Product"><span id="product_description"
                     property="description">${PRODUCT.Description}</span></div>
-            <table id="product_characteristics" class="table">${PRODUCT.CustomFields.Features}</table>
+            <table id="product_characteristics" class="table">${PRODUCT.CustomFields.Features}
+            </table>
         </div>
         <!-- END Row réassurance + produit -->
 
-        <!-- START Row Best-sellers-->
+        <!-- START Row BAKELIT.EU-->   
         <div class="container mt-5">
-            <h2 class="d-flex justify-content-center bg-bakelit-red text-white">
-                Ils pourraient vous plaire...
-            </h2>
-            <div class="d-flex justify-content-center">
-                SLIDER BEST SELLERS
-            </div>
-            <!-- END Row Best-sellers-->
-
+            <p class="d-flex justify-content-center bg-bakelit-red text-white h3">
+               Retrouvez nous également sur :
+            </p>
+            <div class="d-flex justify-content-center mb-2">
+                <a href="" class="bg-bakelit-red"> BANIERE CLIQUABLE Bakelit.eu !</a>
+            </div> 
         </div>
+        <!-- END Row BAKELIT.EU -->
     </main>
     <footer>
         <div class="container">
