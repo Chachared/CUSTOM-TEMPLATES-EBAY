@@ -24,11 +24,12 @@ h6 {
 }
 
 .text-white {
-    color: antiquewhite;
+    color: white;
 }
 
 .border-white {
-    border: 1px solid antiquewhite;
+    border: 1px solid white;
+    border-radius: 10px 10px 10px 10px;
 }
 
 /** GENERAL **/
@@ -43,15 +44,9 @@ body {
 
 
 /*** NAV ***/
-.vertical-hr {
-    border-left: 2px solid antiquewhite;
-    display: inline-block;
-    height: 35px;
-    margin-right: 5px;
-}
 
 a {
-    color: antiquewhite;
+    color: white;
     text-decoration: none;
 }
 
@@ -60,12 +55,12 @@ a {
 }
 
 .custom-toggler.navbar-toggler {
-    border-color: antiquewhite;
+    border-color: white;
 }
 
 /** card reassurance**/
 .card {
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 /** gallery **/
@@ -87,12 +82,6 @@ a {
 
 .content__gallery .slider__wrapper {
     overflow: hidden;
-}
-
-.slider__wrapper {
-    border: solid 1px #E65F78;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 5px 5px 5px #E65F78;
 }
 
 .content__gallery .slider__wrapper .slider {
@@ -175,13 +164,13 @@ a {
 }
 
 .slide-1 {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Chevrolet_Corvette_1958.jpg/640px-Chevrolet_Corvette_1958.jpg");
+    background-image: src("${PRODUCT.CustomFields.Image1}");
 }
 
 .slide-2 {
-    background-image: url("https://cdn.dealeraccelerate.com/international/1/811/38358/1920x1440/1996-mitsubishi-lancer-evolution-iv");
+    background-image: src("${PRODUCT.CustomFields.Image2}");
 }
 
 .slide-3 {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-AxLl6W6X-kSYq4XxFQh5CBCRgXtP-ny-UbYcSVIqfN-EqO-Oc3uIcJWEca-AZilrtio&usqp=CAU");
+    background-image: src("${PRODUCT.CustomFields.Image3}");
 }
