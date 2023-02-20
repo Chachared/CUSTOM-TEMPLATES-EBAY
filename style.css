@@ -38,15 +38,18 @@ body {
     font-family: "Nunito", sans-serif
 }
 
-a {
+a:link {
     color: white;
     text-decoration: none
 }
 
-.card-top {
-    border-radius: 10px 10px 10px 10px;
+a:hover {
+    color: white;
 }
 
+.card-top {
+    border-radius: 10px 10px 10px 10px
+}
 
 .gallery__wrapper {
     display: block;
@@ -147,20 +150,20 @@ a {
 }
 
 .slide-1 {
-    background-image:src("${PRODUCT.CustomFields Image1}")
+    background-image:src("${PRODUCT.CustomFields.Image1}")
 }
 
 .slide-2 {
-    background-image:src("${PRODUCT.CustomFields Image2}")
+    background-image:src("${PRODUCT.CustomFields.Image2}")
 }
 
 .slide-3 {
-    background-image:src("${PRODUCT.CustomFields Image3}")
+    background-image:src("${PRODUCT.CustomFields.Image3}")
 }
 
 @media (max-width:768px) {
     .bakelit-logo {
-        max-height: 50px;
+        max-height: 50px
     }
 
     .menu {
@@ -201,24 +204,25 @@ a {
     }
 
     .card-top {
-        display: none;
+        display: none
     }
-    
+
     .thumb-partners {
         max-height: 20px;
         margin-right: 2px;
-        margin-bottom: 3px;
+        margin-bottom: 3px
     }
 
     .title-partners {
-        font-size: small;
+        font-size: small
     }
 }
 
 @media (max-width:1000px) and (min-width:768px) {
     .bakelit-logo {
-        max-height: 50px;
+        max-height: 50px
     }
+
     .menu {
         display: flex;
         flex-wrap: wrap;
@@ -233,23 +237,23 @@ a {
     }
 
     .card-top {
-        display: none;
+        display: none
     }
 
     .thumb-partners {
         max-height: 20px;
         margin-right: 2px;
-        margin-bottom: 3px;
+        margin-bottom: 3px
     }
 
     .title-partners {
-        font-size: small;
+        font-size: small
     }
 }
 
 @media (min-width:1000px) and (max-width:1300px) {
     .card-top {
-        display: none;
+        display: none
     }
 
     .menu {
@@ -268,7 +272,7 @@ a {
     .thumb-partners {
         max-height: 50px;
         margin-right: 2px;
-        margin-bottom: 3px;
+        margin-bottom: 3px
     }
 }
 
@@ -289,10 +293,10 @@ a {
     .thumb-partners {
         max-width: 55px;
         margin-right: 2px;
-        margin-bottom: 3px;
+        margin-bottom: 3px
     }
 
     .advantages-bottom {
-        display: none;
+        display: none
     }
 }

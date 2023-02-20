@@ -8,7 +8,306 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.1.96/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600,700');
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .bg-soft-red {
+            background-color: #E65F78
+        }
+
+        .bg-bakelit-red {
+            background-color: #F80000
+        }
+
+        .bakelit-red {
+            color: #F80000
+        }
+
+        .text-white {
+            color: white
+        }
+
+        .border-white {
+            border: 1px solid white;
+            border-radius: 10px 10px 10px 10px
+        }
+
+        img {
+            max-width: 100%
+        }
+
+        body {
+            font-family: "Nunito", sans-serif
+        }
+
+        a {
+            color: white;
+            text-decoration: none
+        }
+
+        .card-top {
+            border-radius: 10px 10px 10px 10px
+        }
+
+        .gallery__wrapper {
+            display: block;
+            height: 80%
+        }
+
+        .content__gallery {
+            width: 100%;
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center
+        }
+
+        .content__gallery .slider__wrapper {
+            overflow: hidden
+        }
+
+        .content__gallery .slider__wrapper .slider {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 0;
+            transition: all 0s 9999999s
+        }
+
+        .content__gallery .slider__wrapper .slider>* {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%
+        }
+
+        .content__gallery .thumb__float {
+            display: inline-block;
+            margin: 12px;
+            border: 1px solid #E65F78
+        }
+
+        .content__gallery .thumb__float .thumb__wrapper {
+            width: 80px;
+            height: auto;
+            padding: 3px
+        }
+
+        .content__gallery .thumb__float .thumb__wrapper img {
+            cursor: zoom-in
+        }
+
+        .content__gallery .slider__wrapper {
+            order: 1
+        }
+
+        .content__gallery .thumb__float {
+            order: 2
+        }
+
+        #layout {
+            overflow-x: hidden
+        }
+
+        #layout .slider__wrapper {
+            width: 100%;
+            height: 250px;
+            order: 1
+        }
+
+        .thumb1:active~.slider__wrapper>.slider {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-0%);
+            -webkit-transform: translateX(-0%);
+            -ms-transform: translateX(-0%)
+        }
+
+        .thumb2:active~.slider__wrapper>.slider {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%)
+        }
+
+        .thumb3:active~.slider__wrapper>.slider {
+            -webkit-transition: all 0s;
+            -ms-transition: all 0s;
+            transition: all 0s;
+            transform: translateX(-200%);
+            -webkit-transform: translateX(-200%);
+            -ms-transform: translateX(-200%)
+        }
+
+        .slide-1 {
+            background-image:src("${PRODUCT.CustomFields Image1}")
+        }
+
+        .slide-2 {
+            background-image:src("${PRODUCT.CustomFields Image2}")
+        }
+
+        .slide-3 {
+            background-image:src("${PRODUCT.CustomFields Image3}")
+        }
+
+        @media (max-width:768px) {
+            .bakelit-logo {
+                max-height: 50px
+            }
+
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 0;
+                max-height: 0;
+                opacity: 0;
+                transition-property: margin 5s ease-in-out max-height 5s ease-in-out;
+                overflow: hidden;
+                visibility: hidden
+            }
+
+            .menu-checkbox:checked~.menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin: 1em;
+                opacity: 1;
+                list-style-type: none;
+                max-height: 100%;
+                visibility: visible
+            }
+
+            .mdi-menu {
+                font-size: 40px;
+                cursor: pointer;
+                border: solid 3px white;
+                padding: 1px 10px 0 10px;
+                border-radius: 15px 15px 15px 15px
+            }
+
+            .menu-checkbox {
+                opacity: 0;
+                position: absolute top 1000px
+            }
+
+            .card-top {
+                display: none
+            }
+
+            .thumb-partners {
+                max-height: 20px;
+                margin-right: 2px;
+                margin-bottom: 3px
+            }
+
+            .title-partners {
+                font-size: small
+            }
+        }
+
+        @media (max-width:1000px) and (min-width:768px) {
+            .bakelit-logo {
+                max-height: 50px
+            }
+
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none
+            }
+
+            .menu-checkbox,
+            .label-checkbox {
+                display: none
+            }
+
+            .card-top {
+                display: none
+            }
+
+            .thumb-partners {
+                max-height: 20px;
+                margin-right: 2px;
+                margin-bottom: 3px
+            }
+
+            .title-partners {
+                font-size: small
+            }
+        }
+
+        @media (min-width:1000px) and (max-width:1300px) {
+            .card-top {
+                display: none
+            }
+
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none
+            }
+
+            .menu-checkbox,
+            .label-checkbox {
+                display: none
+            }
+
+            .thumb-partners {
+                max-height: 50px;
+                margin-right: 2px;
+                margin-bottom: 3px
+            }
+        }
+
+        @media (min-width:1300px) {
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none
+            }
+
+            .menu-checkbox,
+            .label-checkbox {
+                display: none
+            }
+
+            .thumb-partners {
+                max-width: 55px;
+                margin-right: 2px;
+                margin-bottom: 3px
+            }
+
+            .advantages-bottom {
+                display: none
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -149,7 +448,7 @@
                             </p>
                             <hr>
                             <div class="card-logos">
-                                <h6 class="text-center fw-bold mb-3">Nous leur faisons confiance:</h6>
+                                <h6 class="text-center fw-bold mb-3">Ils nous font confiance</h6>
                                 <img src="https://services.bakelit.fr/images/partenaires/hella-min.webp" alt="logo"
                                     class="thumb-partners">
                                 <img src="https://services.bakelit.fr/images/partenaires/clas-min.webp" alt="logo"
@@ -197,17 +496,17 @@
                             <div class="content__gallery">
                                 <div class="thumb__float thumb1">
                                     <div class="thumb__wrapper">
-                                        <img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.CustomFields Title}">
+                                        <img src="${PRODUCT.CustomFields.Image1}" alt="${PRODUCT.CustomFields.Title}">
                                     </div>
                                 </div>
                                 <div class="thumb__float thumb2">
                                     <div class="thumb__wrapper">
-                                        <img src="${PRODUCT.CustomFields Image2}" alt="${PRODUCT.CustomFields Title}">
+                                        <img src="${PRODUCT.CustomFields.Image2}" alt="${PRODUCT.CustomFields.Title}">
                                     </div>
                                 </div>
                                 <div class="thumb__float thumb3">
                                     <div class="thumb__wrapper">
-                                        <img src="${PRODUCT.CustomFields Image3}" alt="${PRODUCT.CustomFields Title}">
+                                        <img src="${PRODUCT.CustomFields.Image3}" alt="${PRODUCT.CustomFields.Title}">
                                     </div>
                                 </div>
                                 <div class="slider__wrapper">
@@ -225,13 +524,14 @@
 
                         <div class="col-lg-7 col-sm-12 col-xs-12">
                             <div class="">
-                                <h4 id="product_title" class="mt-5">${PRODUCT.CustomFields Title}</h4>
-                                <h5 id="brand">${PRODUCT.CustomFields Brand}</h5>
+                                <h4 id="product_title" class="mt-5">${PRODUCT.CustomFields.Title}</h4>
+                                <h5 id="brand">${PRODUCT.CustomFields.Brand}</h5>
                             </div>
                             <hr />
                             <div class="">
                                 <div class="h6 fw-bold"><span class="mdi mdi-truck"> ENVOI</span></div>
-                                <p class="small">Expédition sous 24-48h à réception du paiement et réception sous 48H
+                                <p class="small">Expédition sous 24h à réception du paiement et réception sous
+                                    ${PRODUCT.CustomFields.Delivery}
                                     après expédition. </p>
                                 <hr />
                                 <div class="h6 fw-bold"><span class="mdi mdi-credit-card-outline"> PAIEMENT</span></div>
@@ -251,10 +551,10 @@
                 </div>
                 <div vocab="https://schema.org/" typeof="Product"><span id="product_description"
                         property="description">${PRODUCT.Description}</span></div>
-                <table id="product_characteristics" class="table">${PRODUCT.CustomFields Features}
+                <table id="product_characteristics" class="table">${PRODUCT.CustomFields.Features}
                 </table>
             </div>
-            
+
             <div class="advantages-bottom my-2">
                 <div class="bg-bakelit-red text-white text-center">
                     <h4>Les avantages de Bakelit</h4>
@@ -274,7 +574,7 @@
                     <img src="https://services.bakelit.fr/images/partenaires/lucas-min.webp" alt="logo"
                         class="img-responsive me-1 my-2 thumb-partners">
                     <img src="https://services.bakelit.fr/images/partenaires/calorstat-min.webp" alt="logo"
-                        class="img-responsive mx-1 my-2 thumb-partners">
+                        class="img-responsive me-1 my-2 thumb-partners">
                     <img src="https://services.bakelit.fr/images/partenaires/bosch-min.webp" alt="logo"
                         class="img-responsive me-1 my-2 thumb-partners">
                     <img src="https://services.bakelit.fr/images/partenaires/elring-min.webp" alt="logo"
@@ -293,65 +593,77 @@
                         class="img-responsive me-1 my-2 thumb-partners">
                     <img src="https://services.bakelit.fr/images/partenaires/skf-min.webp" alt="logo"
                         class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/CompagnieHousse-min.webp"
-                        alt="logo" class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/MaisonEugene-min.webp"
-                        alt="logo" class="img-responsive me-1 my-2 thumb-partners">
+                    <img src="https://services.bakelit.fr/images/partenaires/CompagnieHousse-min.webp" alt="logo"
+                        class="img-responsive me-1 my-2 thumb-partners">
+                    <img src="https://services.bakelit.fr/images/partenaires/MaisonEugene-min.webp" alt="logo"
+                        class="img-responsive me-1 my-2 thumb-partners">
                     <img src="https://services.bakelit.fr/images/partenaires/vsf-min.webp" alt="logo"
                         class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/brightangle-min.webp"
-                        alt="logo" class="img-responsive me-1 my-2 thumb-partners">
+                    <img src="https://services.bakelit.fr/images/partenaires/brightangle-min.webp" alt="logo"
+                        class="img-responsive me-1 my-2 thumb-partners">
                     <img src="https://services.bakelit.fr/images/partenaires/fare-min.webp" alt="logo"
                         class="img-responsive me-1 my-2 thumb-partners">
                 </div>
             </div>
-            
+
         </div>
         <!-- END Row réassurance + produit -->
 
         <!-- START Row BAKELIT.EU-->
-        <!-- <div class="container mt-5">
+        <div class="container mt-5">
             <p class="d-flex justify-content-center bg-bakelit-red text-white h3">
                 Retrouvez nous également sur :
             </p>
             <div class="d-flex justify-content-center mb-2">
-                <a href="https://bakelit.eu/" target="_blank" class="bg-bakelit-red"> BANIERE CLIQUABLE Bakelit.eu !</a>
+                <a href="https://webstore.bakelit.eu/" target="_blank" class="bg-bakelit-red"> BANIERE CLIQUABLE
+                    Bakelit.eu !</a>
             </div>
-        </div> -->
+        </div>
         <!-- END Row BAKELIT.EU -->
     </main>
     <footer>
         <div class="container">
             <div class="bg-bakelit-red text-white">
                 <div class="row">
-                    <div class="col d-flex justify-content-center align-items-center border-white mx-5 my-4">
-                        depuis 2018...
+                    <div class="col text-center mx-5 mt-4 px-3 pt-3">
+                        <a href="https://www.google.fr/maps/place/Bakelit/@45.8858987,6.101666,17z/data=!3m1!5s0x478b9ab056d3faad:0x9cf333c4eb15fdcd!4m14!1m7!3m6!1s0x478b9b8593289db7:0x7ed1fd2d7f11e924!2sBakelit!8m2!3d45.885895!4d6.1038547!16s%2Fg%2F11fnhydfk1!3m5!1s0x478b9b8593289db7:0x7ed1fd2d7f11e924!8m2!3d45.885895!4d6.1038547!16s%2Fg%2F11fnhydfk1"
+                            target="_blank" class="nav-link text-white">
+                            <span class="mdi mdi-map-marker display-4"></span> <br>
+                            <p class="mt-2">
+                                <span class="fw-bold">BAKELIT</span> <br>
+                                7 Rue Blaise Pascal<br>
+                                74600 <span class="fw-bold">SEYNOD</span> <br>
+                                <i>France</i>
+                            </p>
+                        </a>
                     </div>
-                    <div class="col d-flex justify-content-center align-items-center border-white mx-5 my-4 px-3 py-3">
-                        42
+                    <div class="col text-center mx-5 mt-4 px-3 pt-3">
+                        <a href="tel:+33450112316" class="nav-link text-white">
+                            <span class="mdi mdi-phone-classic display-4"></span> <br>
+                            <p class="mt-2">04 50 11 23 16</p>
+                        </a>
+                        <p class="small mt-2">*appel gratuit</p>
                     </div>
-                    <div class="col d-flex justify-content-center align-items-center border-white mx-5 my-4 px-3 py-3">
-                        100%
+                    <div class="col text-center mx-5 mt-4 px-3 pt-3">
+                        <a href="mailto:contact@bakelit.fr" class="nav-link text-white">
+                            <span class="mdi mdi-email-edit-outline display-4"></span> <br>
+                            <p class="mt-2">contact@bakelit.fr</p>
+                        </a>
                     </div>
-                    <div class="col d-flex justify-content-center align-items-center 
-                    border-white mx-5 my-4 px-3 py-3">
+                    <div class="col text-center mx-5 mt-4 px-3 pt-3">
                         <a href="https://www.ebay.fr/usr/bakelit.eu?uc=profile#tab2" target="_blank"
-                            class="bg-bakelit-red">
-                            Avis boutique
-                            <br>
-                            <span class="mdi mdi-star" style="color:gold;"></span>
-                            <span class="mdi mdi-star" style="color:gold;"></span>
-                            <span class="mdi mdi-star" style="color:gold;"></span>
-                            <span class="mdi mdi-star" style="color:gold;"></span>
-                            <span class="mdi mdi-star" style="color:gold;"></span>
+                            class="bg-bakelit-red nav-link text-white">
+                            <span class="mdi mdi-star display-4"></span>
+                            <p class="mt-2">Avis boutique</p>
                         </a>
                     </div>
                 </div>
-                <div class="text-center me-3">
-                    <a href="https://www.ebay.fr/str/renovatioautomotive#tab1" target="_blank" class="mx-3">A propos</a>
-                    - COPYRIGHT &copy; BAKELIT 2023 -
+                
+                <div class="d-flex align-items-center justify-content-center text-center me-3">
+                    <a href="https://www.ebay.fr/str/renovatioautomotive#tab1" target="_blank" class="mx-3 nav-link text-white">A propos</a>
+                    - COPYRIGHT &copy; BAKELIT -
                     <a href="https://contact.ebay.fr/ws/eBayISAPI.dll?FindAnswers&requested=officialstroilioro.shop&_trksid=p2545226.m2531.l4583&rt=nc"
-                        target="_blank" class="mx-3">Contact</a>
+                        target="_blank" class="mx-3 nav-link text-white">Contact boutique Ebay</a>
                 </div>
 
             </div>
