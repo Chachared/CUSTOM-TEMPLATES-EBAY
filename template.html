@@ -58,6 +58,18 @@
             border-radius: 10px 10px 10px 10px
         }
 
+        .small-thumb-partners {
+            min-width: 80px;
+            margin-right: 2px;
+            margin-bottom: 3px
+        }
+
+        .large-thumb-partners {
+            min-width: 150px;
+            margin-right: 2px;
+            margin-bottom: 3px;
+        }
+
         .gallery__wrapper {
             display: block;
             height: 80%
@@ -214,14 +226,22 @@
                 display: none
             }
 
-            .thumb-partners {
-                max-height: 20px;
+            .small-thumb-partners {
+                width: 40px;
+            }
+
+            .large-thumb-partners {
+                width: 80px;
                 margin-right: 2px;
                 margin-bottom: 3px
             }
 
             .title-partners {
                 font-size: small
+            }
+
+            .footer-icon-text {
+                display: none;
             }
         }
 
@@ -247,14 +267,20 @@
                 display: none
             }
 
-            .thumb-partners {
-                max-height: 20px;
+            .title-partners {
+                font-size: small
+            }
+
+            .small-thumb-partners {
+                width: 50px;
                 margin-right: 2px;
                 margin-bottom: 3px
             }
 
-            .title-partners {
-                font-size: small
+            .large-thumb-partners {
+                width: 80px;
+                margin-right: 2px;
+                margin-bottom: 3px
             }
         }
 
@@ -275,12 +301,6 @@
             .label-checkbox {
                 display: none
             }
-
-            .thumb-partners {
-                max-height: 50px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
         }
 
         @media (min-width:1300px) {
@@ -297,14 +317,20 @@
                 display: none
             }
 
-            .thumb-partners {
-                max-width: 55px;
+            .advantages-bottom {
+                display: none
+            }
+
+            .small-thumb-partners {
+                width: 50px;
                 margin-right: 2px;
                 margin-bottom: 3px
             }
 
-            .advantages-bottom {
-                display: none
+            .large-thumb-partners {
+                width: 80px;
+                margin-right: 2px;
+                margin-bottom: 3px
             }
         }
     </style>
@@ -436,7 +462,7 @@
     <main>
         <!-- START Row réassurance + produit -->
         <div class="container">
-            <div class="row my-2 d-flex align-items-center">
+            <div class="row my-2 d-flex align-items-top">
                 <div class="col-lg-3 col-sm-12 col-xs-12 mx-2 d-flex align-items-center justify-content-center">
                     <div class="card-top shadow-lg my-3">
                         <div class="card-body">
@@ -447,44 +473,46 @@
                                 dignissim eleifend, ligula tortor posuere tellus, et venenatis nunc velit gravida massa.
                             </p>
                             <hr>
-                            <div class="card-logos">
+                            <div>
                                 <h6 class="text-center fw-bold mb-3">Ils nous font confiance</h6>
-                                <img src="https://services.bakelit.fr/images/partenaires/hella-min.webp" alt="logo"
-                                    class="thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/clas-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/lucas-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/calorstat-min.webp" alt="logo"
-                                    class="img-responsive mx-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/bosch-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/elring-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/kyb-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/BorgBeck-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/liquimoly-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/marshal-min.webp" alt="logo"
-                                    class="img-responsive me-1 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/mintex-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/osram-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/skf-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/CompagnieHousse-min.webp"
-                                    alt="logo" class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/MaisonEugene-min.webp"
-                                    alt="logo" class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/vsf-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/brightangle-min.webp"
-                                    alt="logo" class="img-responsive me-1 my-2 thumb-partners">
-                                <img src="https://services.bakelit.fr/images/partenaires/fare-min.webp" alt="logo"
-                                    class="img-responsive me-1 my-2 thumb-partners">
+                                <div class="card-logos text-center">
+                                    <img src="https://services.bakelit.fr/images/partenaires/hella-min.webp" alt="logo"
+                                        class="img-responsive me-5 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/clas-min.webp" alt="logo"
+                                        class="img-responsive me-1 my-2 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/lucas-min.webp" alt="logo"
+                                        class="img-responsive me-1 my-2 large-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/calorstat-min.webp"
+                                        alt="logo" class="img-responsive mx-1 my-2 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/MaisonEugene-min.webp"
+                                        alt="logo" class="img-responsive me-4 my-2 large-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/bosch-min.webp" alt="logo"
+                                        class="img-responsive me-1 my-2 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/fare-min.webp" alt="logo"
+                                        class="img-responsive me-4 my-2 large-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/elring-min.webp" alt="logo"
+                                        class="img-responsive me-1 my-2 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/BorgBeck-min.webp"
+                                        alt="logo" class="img-responsive me-4 my-2 large-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/kyb-min.webp" alt="logo"
+                                        class="img-responsive me-1 my-2 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/marshal-min.webp"
+                                        alt="logo" class="img-responsive me-4 large-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/liquimoly-min.webp"
+                                        alt="logo" class="img-responsive me-1 my-2 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/mintex-min.webp" alt="logo"
+                                        class="img-responsive me-4 my-2 large-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/osram-min.webp" alt="logo"
+                                        class="img-responsive me-1 my-2 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/CompagnieHousse-min.webp"
+                                        alt="logo" class="img-responsive me-4 my-2 large-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/skf-min.webp" alt="logo"
+                                        class="img-responsive me-1 my-2 small-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/vsf-min.webp" alt="logo"
+                                        class="img-responsive me-4 my-2 large-thumb-partners">
+                                    <img src="https://services.bakelit.fr/images/partenaires/brightangle-min.webp"
+                                        alt="logo" class="img-responsive me-1 my-2 small-thumb-partners">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -539,21 +567,22 @@
                             </div>
 
                         </div>
+                        <div>
+                            <div class="bg-bakelit-red text-white text-center">
+                                <h4>CARACTERISTIQUES TECHNIQUES</h4>
+                            </div>
+                            <div vocab="https://schema.org/" typeof="Product"><span id="product_description"
+                                    property="description">${PRODUCT.Description}</span></div>
+                            <table id="product_characteristics" class="table">${PRODUCT.CustomFields.Features}
+                            </table>
+                        </div>
 
                     </div>
                 </div>
 
             </div>
 
-            <div>
-                <div class="bg-bakelit-red text-white text-center">
-                    <h4>CARACTERISTIQUES TECHNIQUES</h4>
-                </div>
-                <div vocab="https://schema.org/" typeof="Product"><span id="product_description"
-                        property="description">${PRODUCT.Description}</span></div>
-                <table id="product_characteristics" class="table">${PRODUCT.CustomFields.Features}
-                </table>
-            </div>
+
 
             <div class="advantages-bottom my-2">
                 <div class="bg-bakelit-red text-white text-center">
@@ -565,44 +594,43 @@
                     dignissim eleifend, ligula tortor posuere tellus, et venenatis nunc velit gravida massa.
                 </p>
                 <hr>
-                <div class="card-logos">
-                    <h6 class="text-center fw-bold mb-3 title-partners">Nous leur faisons confiance:</h6>
+                <div class="card-logos text-center">
                     <img src="https://services.bakelit.fr/images/partenaires/hella-min.webp" alt="logo"
-                        class="thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/clas-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/lucas-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/calorstat-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/bosch-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/elring-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/kyb-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/BorgBeck-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/liquimoly-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/marshal-min.webp" alt="logo"
-                        class="img-responsive me-1 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/mintex-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/osram-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/skf-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/CompagnieHousse-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/MaisonEugene-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/vsf-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/brightangle-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
-                    <img src="https://services.bakelit.fr/images/partenaires/fare-min.webp" alt="logo"
-                        class="img-responsive me-1 my-2 thumb-partners">
+                    class="img-responsive me-5 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/clas-min.webp" alt="logo"
+                    class="img-responsive me-1 my-2 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/lucas-min.webp" alt="logo"
+                    class="img-responsive me-1 my-2 large-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/calorstat-min.webp"
+                    alt="logo" class="img-responsive mx-1 my-2 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/MaisonEugene-min.webp"
+                    alt="logo" class="img-responsive me-4 my-2 large-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/bosch-min.webp" alt="logo"
+                    class="img-responsive me-1 my-2 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/fare-min.webp" alt="logo"
+                    class="img-responsive me-4 my-2 large-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/elring-min.webp" alt="logo"
+                    class="img-responsive me-1 my-2 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/BorgBeck-min.webp"
+                    alt="logo" class="img-responsive me-4 my-2 large-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/kyb-min.webp" alt="logo"
+                    class="img-responsive me-1 my-2 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/marshal-min.webp"
+                    alt="logo" class="img-responsive me-4 large-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/liquimoly-min.webp"
+                    alt="logo" class="img-responsive me-1 my-2 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/mintex-min.webp" alt="logo"
+                    class="img-responsive me-4 my-2 large-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/osram-min.webp" alt="logo"
+                    class="img-responsive me-1 my-2 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/CompagnieHousse-min.webp"
+                    alt="logo" class="img-responsive me-4 my-2 large-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/skf-min.webp" alt="logo"
+                    class="img-responsive me-1 my-2 small-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/vsf-min.webp" alt="logo"
+                    class="img-responsive me-4 my-2 large-thumb-partners">
+                <img src="https://services.bakelit.fr/images/partenaires/brightangle-min.webp"
+                    alt="logo" class="img-responsive me-1 my-2 small-thumb-partners">
                 </div>
             </div>
 
@@ -625,11 +653,11 @@
         <div class="container">
             <div class="bg-bakelit-red text-white">
                 <div class="row">
-                    <div class="col text-center mx-5 mt-4 px-3 pt-3">
+                    <div class="col pt-4 text-center">
                         <a href="https://www.google.fr/maps/place/Bakelit/@45.8858987,6.101666,17z/data=!3m1!5s0x478b9ab056d3faad:0x9cf333c4eb15fdcd!4m14!1m7!3m6!1s0x478b9b8593289db7:0x7ed1fd2d7f11e924!2sBakelit!8m2!3d45.885895!4d6.1038547!16s%2Fg%2F11fnhydfk1!3m5!1s0x478b9b8593289db7:0x7ed1fd2d7f11e924!8m2!3d45.885895!4d6.1038547!16s%2Fg%2F11fnhydfk1"
                             target="_blank" class="nav-link text-white">
                             <span class="mdi mdi-map-marker display-4"></span> <br>
-                            <p class="mt-2">
+                            <p class="mt-2 footer-icon-text">
                                 <span class="fw-bold">BAKELIT</span> <br>
                                 7 Rue Blaise Pascal<br>
                                 74600 <span class="fw-bold">SEYNOD</span> <br>
@@ -637,30 +665,31 @@
                             </p>
                         </a>
                     </div>
-                    <div class="col text-center mx-5 mt-4 px-3 pt-3">
+                    <div class="col pt-4 text-center">
                         <a href="tel:+33450112316" class="nav-link text-white">
                             <span class="mdi mdi-phone-classic display-4"></span> <br>
-                            <p class="mt-2">04 50 11 23 16</p>
+                            <p class="mt-2 footer-icon-text">04 50 11 23 16</p>
                         </a>
                         <p class="small mt-2">*appel gratuit</p>
                     </div>
-                    <div class="col text-center mx-5 mt-4 px-3 pt-3">
+                    <div class="col pt-4 text-center">
                         <a href="mailto:contact@bakelit.fr" class="nav-link text-white">
                             <span class="mdi mdi-email-edit-outline display-4"></span> <br>
-                            <p class="mt-2">contact@bakelit.fr</p>
+                            <p class="mt-2 footer-icon-text">contact@bakelit.fr</p>
                         </a>
                     </div>
-                    <div class="col text-center mx-5 mt-4 px-3 pt-3">
+                    <div class="col pt-4 text-center footer-icon">
                         <a href="https://www.ebay.fr/usr/bakelit.eu?uc=profile#tab2" target="_blank"
                             class="bg-bakelit-red nav-link text-white">
                             <span class="mdi mdi-star display-4"></span>
-                            <p class="mt-2">Avis boutique</p>
+                            <p class="mt-2 footer-icon-text">Avis boutique</p>
                         </a>
                     </div>
                 </div>
-                
-                <div class="d-flex align-items-center justify-content-center text-center me-3">
-                    <a href="https://www.ebay.fr/str/renovatioautomotive#tab1" target="_blank" class="mx-3 nav-link text-white">A propos</a>
+
+                <div class="d-flex align-items-center justify-content-center text-center">
+                    <a href="https://www.ebay.fr/str/renovatioautomotive#tab1" target="_blank"
+                        class="mx-3 nav-link text-white">A propos</a>
                     - COPYRIGHT &copy; BAKELIT -
                     <a href="https://contact.ebay.fr/ws/eBayISAPI.dll?FindAnswers&requested=officialstroilioro.shop&_trksid=p2545226.m2531.l4583&rt=nc"
                         target="_blank" class="mx-3 nav-link text-white">Contact boutique Ebay</a>
