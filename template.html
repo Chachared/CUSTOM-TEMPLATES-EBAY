@@ -8,343 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.1.96/css/materialdesignicons.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600,700');
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Montserrat", sans-serif
-        }
-
-        .bg-soft-red {
-            background-color: #E65F78
-        }
-
-        .bg-bakelit-red {
-            background-color: #F80000
-        }
-
-        .bakelit-red {
-            color: #F80000
-        }
-
-        .text-white {
-            color: white
-        }
-
-        .border-white {
-            border: 1px solid white;
-            border-radius: 10px 10px 10px 10px
-        }
-
-        img {
-            max-width: 100%
-        }
-
-        body {
-            font-family: "Nunito", sans-serif
-        }
-
-        a {
-            color: white;
-            text-decoration: none
-        }
-
-        .card-top {
-            border-radius: 10px 10px 10px 10px
-        }
-
-        .small-thumb-partners {
-            min-width: 80px;
-            margin-right: 2px;
-            margin-bottom: 3px
-        }
-
-        .large-thumb-partners {
-            min-width: 150px;
-            margin-right: 2px;
-            margin-bottom: 3px;
-        }
-
-        .gallery__wrapper {
-            display: block;
-            height: 80%
-        }
-
-        .content__gallery {
-            width: 100%;
-            position: relative;
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center
-        }
-
-        .content__gallery .slider__wrapper {
-            overflow: hidden
-        }
-
-        .content__gallery .slider__wrapper .slider {
-            height: 100%;
-            width: 100%;
-            display: inline-block;
-            white-space: nowrap;
-            font-size: 0;
-            transition: all 0s 9999999s
-        }
-
-        .content__gallery .slider__wrapper .slider>* {
-            height: 100%;
-            width: 100%;
-            display: inline-block;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: 50%
-        }
-
-        .content__gallery .thumb__float {
-            display: inline-block;
-            margin: 12px;
-            border: 1px solid #E65F78
-        }
-
-        .content__gallery .thumb__float .thumb__wrapper {
-            width: 80px;
-            height: auto;
-            padding: 3px
-        }
-
-        .content__gallery .thumb__float .thumb__wrapper img {
-            cursor: zoom-in
-        }
-
-        .content__gallery .slider__wrapper {
-            order: 1
-        }
-
-        .content__gallery .thumb__float {
-            order: 2
-        }
-
-        #layout {
-            overflow-x: hidden
-        }
-
-        #layout .slider__wrapper {
-            width: 100%;
-            height: 250px;
-            order: 1
-        }
-
-        .thumb1:active~.slider__wrapper>.slider {
-            -webkit-transition: all 0s;
-            -ms-transition: all 0s;
-            transition: all 0s;
-            transform: translateX(-0%);
-            -webkit-transform: translateX(-0%);
-            -ms-transform: translateX(-0%)
-        }
-
-        .thumb2:active~.slider__wrapper>.slider {
-            -webkit-transition: all 0s;
-            -ms-transition: all 0s;
-            transition: all 0s;
-            transform: translateX(-100%);
-            -webkit-transform: translateX(-100%);
-            -ms-transform: translateX(-100%)
-        }
-
-        .thumb3:active~.slider__wrapper>.slider {
-            -webkit-transition: all 0s;
-            -ms-transition: all 0s;
-            transition: all 0s;
-            transform: translateX(-200%);
-            -webkit-transform: translateX(-200%);
-            -ms-transform: translateX(-200%)
-        }
-
-        .slide-1 {
-            background-image:src("${PRODUCT.CustomFields Image1}")
-        }
-
-        .slide-2 {
-            background-image:src("${PRODUCT.CustomFields Image2}")
-        }
-
-        .slide-3 {
-            background-image:src("${PRODUCT.CustomFields Image3}")
-        }
-
-        .bakelit-banner {
-            background-image: url("https://renovatioautomotive.sharepoint.com/:u:/s/IT1/ESlx9kl4Pu9Bg0OAP7Cz68EB2jFXOQyQpEkD6b6jQRGOdA?e=CkbQB1");
-        }
-
-        @media (max-width:768px) {
-            .bakelit-logo {
-                max-height: 50px
-            }
-
-            .menu {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin: 0;
-                max-height: 0;
-                opacity: 0;
-                transition-property: margin 5s ease-in-out max-height 5s ease-in-out;
-                overflow: hidden;
-                visibility: hidden
-            }
-
-            .menu-checkbox:checked~.menu {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-                margin: 1em;
-                opacity: 1;
-                list-style-type: none;
-                max-height: 100%;
-                visibility: visible
-            }
-
-            .mdi-menu {
-                font-size: 40px;
-                cursor: pointer;
-                border: solid 3px white;
-                padding: 1px 10px 0 10px;
-                border-radius: 15px 15px 15px 15px
-            }
-
-            .menu-checkbox {
-                opacity: 0;
-                position: absolute top 1000px
-            }
-
-            .card-top,
-            .advantages-text-top {
-                display: none
-            }
-
-            .small-thumb-partners {
-                width: 40px;
-            }
-
-            .large-thumb-partners {
-                width: 80px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
-
-            .title-partners {
-                font-size: small
-            }
-
-            .footer-icon-text {
-                display: none;
-            }
-        }
-
-        @media (max-width:1000px) and (min-width:768px) {
-            .bakelit-logo {
-                max-height: 50px
-            }
-
-            .menu {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                list-style-type: none
-            }
-
-            .menu-checkbox,
-            .label-checkbox {
-                display: none
-            }
-
-            .card-top,
-            .advantages-text-top {
-                display: none
-            }
-
-            .title-partners {
-                font-size: small
-            }
-
-            .small-thumb-partners {
-                width: 50px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
-
-            .large-thumb-partners {
-                width: 80px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
-        }
-
-        @media (min-width:1000px) and (max-width:1300px) {
-            .card-top {
-                display: none
-            }
-
-            .menu {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                list-style-type: none
-            }
-
-            .menu-checkbox,
-            .label-checkbox {
-                display: none
-            }
-        }
-
-        @media (min-width:1300px) {
-            .menu {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                list-style-type: none
-            }
-
-            .menu-checkbox,
-            .label-checkbox {
-                display: none
-            }
-
-            .advantages-bottom {
-                display: none
-            }
-
-            .small-thumb-partners {
-                width: 50px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
-
-            .large-thumb-partners {
-                width: 80px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
-        }
-    </style>
+ <style>@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600,700'); h1, h2, h3, h4, h5, h6{ font-family: "Montserrat", sans-serif} .bg-soft-red{ background-color: #E65F78} .bg-bakelit-red{ background-color: #F80000} .bakelit-red{ color: #F80000} .text-white{ color: white} img{ max-width: 100%} body{ font-family: "Nunito", sans-serif} a{ color: white; text-decoration: none} .card-top{ border-radius: 10px 10px 10px 10px} .thumb-partners{ max-width: 120px; margin-right: 2px; margin-bottom: 3px} .bakelit-banner{ background-image: url("https://13.36.34.151/template/bakelit_banner.webp"); min-height: 120px;} .advantage-text-bottom{ display: none;} @media (max-width:768px){ .bakelit-logo{ max-height: 50px} .menu{ display: flex; flex-wrap: wrap; justify-content: center; margin: 0; max-height: 0; opacity: 0; transition-property: margin 5s ease-in-out max-height 5s ease-in-out; overflow: hidden; visibility: hidden} .menu-checkbox:checked~.menu{ display: flex; flex-direction: column; justify-content: flex-start; flex-wrap: wrap; margin: 1em; opacity: 1; list-style-type: none; max-height: 100%; visibility: visible} .mdi-menu{ font-size: 40px; cursor: pointer; border: solid 3px white; padding: 1px 10px 0 10px; border-radius: 15px 15px 15px 15px} .menu-checkbox{ opacity: 0; position: absolute top 1000px} .card-top, .advantages-text-top{ display: none} .title-partners{ font-size: small} .footer-icon-text{ display: none;} .thumb-partners{ max-width: 120px; margin-right: 2px; margin-bottom: 3px}} @media (max-width:1000px) and (min-width:768px){ .bakelit-logo{ max-height: 50px} .menu{ display: flex; flex-wrap: wrap; justify-content: center; align-items: center; list-style-type: none} .menu-checkbox, .label-checkbox{ display: none} .card-top, .advantages-text-top{ display: none} .title-partners{ font-size: small} .thumb-partners{ max-width: 120px; margin-right: 2px; margin-bottom: 3px}} @media (min-width:1000px) and (max-width:1300px){ .card-top{ display: none} .menu{ display: flex; flex-wrap: wrap; justify-content: center; align-items: center; list-style-type: none} .menu-checkbox, .label-checkbox{ display: none} .advantage-text-top{ display: none;} .thumb-partners{ max-width: 120px; margin-right: 2px; margin-bottom: 3px}} @media (min-width:1300px){ .menu{ display: flex; flex-wrap: wrap; justify-content: center; align-items: center; list-style-type: none} .menu-checkbox, .label-checkbox{ display: none} .advantages-bottom{ display: none} .advantage-text-top{ display: none;} .thumb-partners{ max-width: 120px; margin-right: 2px; margin-bottom: 3px}} </style>
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row ">
                 <div class="col-lg-2 col-xs-6 d-flex align-items-end me-1 mt-2">
                     <img src="https://services.bakelit.fr/images/logo-bakelit-black.webp"
@@ -357,7 +26,7 @@
             </div>
         </div>
 
-        <nav class="container bg-bakelit-red text-white mt-2">
+        <nav class="container-fluid bg-bakelit-red text-white mt-2">
             <input type="checkbox" id="menu-checkbox" class="menu-checkbox mx-5 my-5">
             <label for="menu-checkbox" class="label-checkbox"><span class="mdi mdi-menu"></span></label>
             <ul class="menu">
@@ -444,65 +113,64 @@
 
     <main>
         <!-- START Row réassurance + produit -->
-        <div class="container">
+        <div class="container-fluid">
             <div class="row my-2 d-flex align-items-top">
                 <div class="col-lg-3 col-sm-12 col-xs-12 mx-2 d-flex align-items-center justify-content-center">
                     <div class="card-top shadow-lg my-3">
                         <div class="card-body">
-                            <h6 class="text-center fw-bold mb-3">Ils nous font confiance</h6>
+                            <h6 class="text-center fw-bold mb-3">Nous leur faisons confiance</h6>
                             <hr>
                             <div class="card-logos text-center">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fclas%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="clas" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fhella%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="hella" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Flucas%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="lucas" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fcalorstat%5Fclassic%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="calorstat classic" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fbrite%5Fangle%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="briteangle" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fbosch%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="bosch" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fgryp%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="gryp" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Felring%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="elring" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fbilstein%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="bilstein" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fefi%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="efi" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fborg%26beck%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="borg&beck" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fkoni%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="koni" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fmarchal%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="marchal" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fkyb%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="kyb" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fmintex%5Fclassic%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="mintex classic" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fliquimoly%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="liquimoly" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fcompagnie%5Fhousse%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="la compagnie de la housse"
-                                    class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fosram%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="osram" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fvsf%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="vsf" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fskf%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="skf" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Ffulmen%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="fulmen" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fbosal%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="bosal" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fngk%5Fntk%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="ngk" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fmotul%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="motul" class="img-responsive me-1 my-2 large-thumb-partners">
-                                <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Felf%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                                    alt="elf" class="img-responsive me-1 my-2 large-thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/clas_min.webp"
+                                    alt="clas" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/hella_min.webp"
+                                    alt="hella" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/lucas_min.webp"
+                                    alt="lucas" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/calorstat_classic_min.webp"
+                                    alt="calorstat classic" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/brite_angle_min.webp"
+                                    alt="briteangle" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/bosch_min.webp"
+                                    alt="bosch" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/gryp_min.webp"
+                                    alt="gryp" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/elring_min.webp"
+                                    alt="elring" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/bilstein_min.webp"
+                                    alt="bilstein" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/efi_min.webp"
+                                    alt="efi" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/borg&beck_min.webp"
+                                    alt="borg&beck" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/koni_min.webp"
+                                    alt="koni" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/marchal_min.webp"
+                                    alt="marchal" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/kyb_min.webp"
+                                    alt="kyb" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/mintex_classic_min.webp"
+                                    alt="mintex classic" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/liquimoly_min.webp"
+                                    alt="liquimoly" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/compagnie_housse_min.webp"
+                                    alt="la compagnie de la housse" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/osram_min.webp"
+                                    alt="osram" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/vsf_min.webp"
+                                    alt="vsf" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/skf_min.webp"
+                                    alt="skf" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/fulmen_min.webp"
+                                    alt="fulmen" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/bosal_min.webp"
+                                    alt="bosal" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/ngk_ntk_min.webp"
+                                    alt="ngk" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/motul_min.webp"
+                                    alt="motul" class="img-responsive me-1 my-2 thumb-partners">
+                                <img src="https://services.bakelit.fr/images/partnerships/suppliers/elf_min.webp"
+                                    alt="elf" class="img-responsive me-1 my-2 thumb-partners">
                             </div>
                             <div>
 
@@ -514,46 +182,21 @@
                 <div class="col-lg-8 col-xs-12">
                     <div class="row mt-3">
                         <div class="col-lg-5 col-sm-12 col-xs-12" id="layout">
-                            <div class="content__gallery">
-                                <div class="thumb__float thumb1">
-                                    <div class="thumb__wrapper">
-                                        <img src="${PRODUCT.CustomFields.Image1}" alt="${PRODUCT.CustomFields.Title}">
-                                    </div>
-                                </div>
-                                <div class="thumb__float thumb2">
-                                    <div class="thumb__wrapper">
-                                        <img src="${PRODUCT.CustomFields.Image2}" alt="${PRODUCT.CustomFields.Title}">
-                                    </div>
-                                </div>
-                                <div class="thumb__float thumb3">
-                                    <div class="thumb__wrapper">
-                                        <img src="${PRODUCT.CustomFields.Image3}" alt="${PRODUCT.CustomFields.Title}">
-                                    </div>
-                                </div>
-                                <div class="slider__wrapper">
-                                    <div class="slider">
-                                        <div class="slide-1">
-                                        </div>
-                                        <div class="slide-2">
-                                        </div>
-                                        <div class="slide-3">
-                                        </div>
-                                    </div>
-                                </div>
+                            <div>
+                                <img src="${PRODUCT.CustomFields.Image1}" alt="${PRODUCT.Title}" class="img-responsive product-image"/>
                             </div>
                         </div>
 
                         <div class="col-lg-7 col-sm-12 col-xs-12">
                             <div class="">
-                                <h4 id="product_title" class="mt-5">${PRODUCT.CustomFields.Title}</h4>
-                                <h5 id="brand">${PRODUCT.CustomFields.Brand}</h5>
+                                <h4 id="product_title" class="mt-5">${PRODUCT.Title}</h4>
+                                <h5 id="brand">${PRODUCT.Subtitle}</h5>
+                                <h6>${PRODUCT.Brand}</h6>
                             </div>
                             <hr />
                             <div class="">
                                 <div class="h6 fw-bold"><span class="mdi mdi-truck"> ENVOI</span></div>
-                                <p class="small">Expédition sous 24h à réception du paiement et réception sous
-                                    ${PRODUCT.CustomFields.Delivery}
-                                    après expédition. </p>
+                                <p class="small">Plus d'infos dans l'onglet "Livraison, retours et paiements".</p>
                                 <hr />
                                 <div class="h6 fw-bold"><span class="mdi mdi-credit-card-outline"> PAIEMENT</span></div>
                                 <p class="small">Paiement par PayPal ou CB uniquement.</p>
@@ -566,33 +209,38 @@
                             </div>
                             <div vocab="https://schema.org/" typeof="Product"><span id="product_description"
                                     property="description">${PRODUCT.Description}</span></div>
-                            <table id="product_characteristics" class="table">${PRODUCT.CustomFields.Features}
-                            </table>
                         </div>
                         <div>
-                            <div class="bg-bakelit-red text-white text-center advantages-text-top">
-                                <h4>Les avantages de Bakelit</h4>
+                            <div class="advantages-text-top mt-3">
+                                <div class="bg-bakelit-red text-white text-center">
+                                    <h4>Les avantages de Bakelit</h4>
+                                </div>
+                                <div class="">
+                                    <p class="card-text">
+                                    <p>Bakelit cherche à rajeunir le monde de l'automobile ancienne en proposant une
+                                        solution centralisée pour entretenir son véhicule sur internet. </p>
+                                    <p>Nous nous positionnons sur la vente en ligne de pièces automobiles pour voitures
+                                        de
+                                        collection produites entre 1940 et 1999, quelque soit la marque ou le modèle du
+                                        véhicule.</p>
+                                    <p>Professionnel ou particulier, notre offre s’adresse aux passionnés qui souhaitent
+                                        restaurer, réparer, bricoler ou modifier leurs véhicules d’une autre époque avec
+                                        des
+                                        pièces de qualité, garanties et à des prix avantageux. </p>
+                                    <p>Vous ne trouvez pas votre bonheur sur notre boutique ? Contactez-nous directement
+                                        pour obtenir gratuitement un devis personnalisé. Nous souhaitons rester au plus
+                                        proche de notre clientèle, c’est pourquoi nous proposons un véritable service
+                                        client
+                                        gratuit, basé dans nos bureaux à Annecy en France. Cette proximité se ressent
+                                        aussi
+                                        à travers les 1000 avis positifs sur eBay !</p>
+                                    <h6>Pour nous contacter : </h6>
+                                    <i class="text-muted">Mail : contact@bakelit.eu - Tel : (+33) 4 50 11 23 16.</i>
+                                    <p>N’hésitez pas à faire appel à nos conseils d’expert. </p>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="">
-                                <p class="card-text">
-                                <p>Bakelit cherche à rajeunir le monde de l'automobile ancienne en proposant une
-                                    solution centralisée pour entretenir son véhicule sur internet. </p>
-                                <p>Nous nous positionnons sur la vente en ligne de pièces automobiles pour voitures de
-                                    collection produites entre 1940 et 1999, quelque soit la marque ou le modèle du
-                                    véhicule.</p>
-                                <p>Professionnel ou particulier, notre offre s’adresse aux passionnés qui souhaitent
-                                    restaurer, réparer, bricoler ou modifier leurs véhicules d’une autre époque avec des
-                                    pièces de qualité, garanties et à des prix avantageux. </p>
-                                <p>Vous ne trouvez pas votre bonheur sur notre boutique ? Contactez-nous directement
-                                    pour obtenir gratuitement un devis personnalisé. Nous souhaitons rester au plus
-                                    proche de notre clientèle, c’est pourquoi nous proposons un véritable service client
-                                    gratuit, basé dans nos bureaux à Annecy en France. Cette proximité se ressent aussi
-                                    à travers les 1000 avis positifs sur eBay !</p>
-                                <h6>Pour nous contacter : </h6>
-                                <i class="text-muted">Mail : contact@bakelit.eu - Tel : (+33) 4 50 11 23 16.</i>
-                                <p>N’hésitez pas à faire appel à nos conseils d’expert. </p>
-                                </p>
-                            </div>
+
 
                         </div>
                     </div>
@@ -624,58 +272,59 @@
                     </p>
                     <hr>
                     <div class="card-logos text-center">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fclas%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="clas" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fhella%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="hella" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Flucas%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="lucas" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fcalorstat%5Fclassic%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="calorstat classic" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fbrite%5Fangle%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="briteangle" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fbosch%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="bosch" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fgryp%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="gryp" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Felring%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="elring" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fbilstein%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="bilstein" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fefi%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="efi" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fborg%26beck%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="borg&beck" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fkoni%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="koni" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fmarchal%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="marchal" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fkyb%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="kyb" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fmintex%5Fclassic%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="mintex classic" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fliquimoly%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="liquimoly" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fcompagnie%5Fhousse%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="la compagnie de la housse" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fosram%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="osram" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fvsf%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="vsf" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fskf%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="skf" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Ffulmen%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="fulmen" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fbosal%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="bosal" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fngk%5Fntk%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="ngk" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Fmotul%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="motul" class="img-responsive me-1 my-2 large-thumb-partners">
-                        <img src="https://renovatioautomotive.sharepoint.com/sites/IT1/Documents%20partages/Forms/AllItems.aspx?FolderCTID=0x012000E453EFDB4FA49A4D9F8273F9E9177E93&id=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos%2Felf%5Fmin%2Ewebp&parent=%2Fsites%2FIT1%2FDocuments%20partages%2FEbay%2Ftemplate%2Fimages%2Fsuppliers%5Flogos"
-                            alt="elf" class="img-responsive me-1 my-2 large-thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/clas_min.webp" alt="clas"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/hella_min.webp" alt="hella"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/lucas_min.webp" alt="lucas"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/calorstat_classic_min.webp"
+                            alt="calorstat classic" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/brite_angle_min.webp"
+                            alt="briteangle" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/bosch_min.webp" alt="bosch"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/gryp_min.webp" alt="gryp"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/elring_min.webp"
+                            alt="elring" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/bilstein_min.webp"
+                            alt="bilstein" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/efi_min.webp" alt="efi"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/borg&beck_min.webp"
+                            alt="borg&beck" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/koni_min.webp" alt="koni"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/marchal_min.webp"
+                            alt="marchal" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/kyb_min.webp" alt="kyb"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/mintex_classic_min.webp"
+                            alt="mintex classic" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/liquimoly_min.webp"
+                            alt="liquimoly" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/compagnie_housse_min.webp"
+                            alt="la compagnie de la housse" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/osram_min.webp" alt="osram"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/vsf_min.webp" alt="vsf"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/skf_min.webp" alt="skf"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/fulmen_min.webp"
+                            alt="fulmen" class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/bosal_min.webp" alt="bosal"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/ngk_ntk_min.webp" alt="ngk"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/motul_min.webp" alt="motul"
+                            class="img-responsive me-1 my-2 thumb-partners">
+                        <img src="https://services.bakelit.fr/images/partnerships/suppliers/elf_min.webp" alt="elf"
+                            class="img-responsive me-1 my-2 thumb-partners">
                     </div>
                 </div>
+
 
             </div>
             <!-- END Row réassurance + produit -->
@@ -683,13 +332,14 @@
             <!-- START Row BAKELIT.EU-->
             <div class="container mt-5">
                 <a href="https://webstore.bakelit.eu/" target="_blank">
-                    <div class="mb-2 bakelit-banner"></div>
+                    <div class="mb-2 bakelit-banner text-dark text-center fw-bold"> Plus de produits sur notre webstore
+                        !</div>
                 </a>
             </div>
             <!-- END Row BAKELIT.EU -->
     </main>
-    <footer>
-        <div class="container">
+    <footer class="container-fluid">
+        <div>
             <div class="bg-bakelit-red text-white">
                 <div class="row">
                     <div class="col pt-4 text-center">

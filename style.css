@@ -47,18 +47,6 @@
             border-radius: 10px 10px 10px 10px
         }
 
-        .small-thumb-partners {
-            min-width: 80px;
-            margin-right: 2px;
-            margin-bottom: 3px
-        }
-
-        .large-thumb-partners {
-            min-width: 150px;
-            margin-right: 2px;
-            margin-bottom: 3px;
-        }
-
         .gallery__wrapper {
             display: block;
             height: 80%
@@ -108,6 +96,10 @@
             padding: 3px
         }
 
+        object .fallback-img {
+            max-width: 80px;
+        }
+
         .content__gallery .thumb__float .thumb__wrapper img {
             cursor: zoom-in
         }
@@ -138,6 +130,7 @@
             -webkit-transform: translateX(-0%);
             -ms-transform: translateX(-0%)
         }
+
 
         .thumb2:active~.slider__wrapper>.slider {
             -webkit-transition: all 0s;
@@ -215,16 +208,6 @@
                 display: none
             }
 
-            .small-thumb-partners {
-                width: 40px;
-            }
-
-            .large-thumb-partners {
-                width: 80px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
-
             .title-partners {
                 font-size: small
             }
@@ -258,18 +241,6 @@
 
             .title-partners {
                 font-size: small
-            }
-
-            .small-thumb-partners {
-                width: 50px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
-
-            .large-thumb-partners {
-                width: 80px;
-                margin-right: 2px;
-                margin-bottom: 3px
             }
         }
 
@@ -308,17 +279,5 @@
 
             .advantages-bottom {
                 display: none
-            }
-
-            .small-thumb-partners {
-                width: 50px;
-                margin-right: 2px;
-                margin-bottom: 3px
-            }
-
-            .large-thumb-partners {
-                width: 80px;
-                margin-right: 2px;
-                margin-bottom: 3px
             }
         }
